@@ -22,7 +22,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   key_name = "VM_First_Key"
   root_block_device {
-    volume_size = 20
+    volume_size = 20    # 20G size
   }
 
   tags = {
@@ -32,7 +32,7 @@ resource "aws_instance" "web" {
 
 resource "aws_ebs_volume" "example" {
   availability_zone = "ap-northeast-2c"
-  size              = 5
+  size = 5
 
   tags = {
     Name = "HelloWorld"
